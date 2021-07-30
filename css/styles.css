@@ -1,0 +1,171 @@
+/* Magic of CSS */
+
+
+/* Typography */
+
+
+/* Example 1: Light, uppercase, with spacing */
+
+
+/* Light text colors on dark backgrounds tend to feel as if they have a heavier weight. So with this example of white on purple, we went with a font-weight: 300.
+
+Using all uppercased letters can be a powerful effect, but you’ll want to use it sparingly. One thing that can happen with uppercased words is THE LETTERS CAN FEEL JAMMED TOGETHER. This is because the default kerning and letter-spacing is meant for mostly-lowercased words. To compensate, and also to add a little more gravitas, we added a generous letter-spacing: .4em.
+
+As can be seen in the letter spacing potion, letter-spacing and text-align don’t play so nicely together because the spacing is added to the right of each letter. To compensate for this, when using these two properties together, we add a padding-left to match the chosen letter-spacing (in this case .4em). */
+
+.typography-example-1 {
+    background-image: linear-gradient(135deg, #723362, #9d223c);
+    background-color: #9d223c;
+    color: #fff;
+    padding: 1em 0;
+    font-weight: 300;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .4em;
+    padding-left: .4em
+}
+
+
+/* Example 2: Contrasting weights and styles */
+
+
+/* In this next example, we show how two lines of text interact with each other.
+
+The first line is given a similar treatment as Example 1, but with a heavier weight of 700. To contrast this, the second line is given a thinner weight, 300, an italic font style, and a lighter color, #888. */
+
+.typography-example-2 {
+    background: #fff;
+    color: #000;
+    border: .5em solid;
+    font-size: 1.5em;
+    padding: 1em 0;
+    text-align: center
+}
+
+.typography-example-2 .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .4em;
+    padding-left: .4em
+}
+
+.typography-example-2 .author {
+    color: #888;
+    font-size: .7em;
+    font-weight: 300;
+    font-style: italic;
+    letter-spacing: .12em;
+    padding-left: .12em
+}
+
+
+/* Example 3: Individual letter treatment */
+
+
+/* Sometimes you want to have a little fun with type. Lettering.js is a great little tool for doing just that. But if you’re willing to type out a bunch of span wrappers for every letter yourself, you can do the same sort of thing without javascript! */
+
+.typography-example-3 {
+    border: .2em solid #ff4136;
+    font-size: 3em;
+    text-align: center;
+    padding: .2em;
+    color: #fff;
+}
+
+.typography-example-3 span {
+    display: inline-block;
+    width: 15%;
+    padding: .8125rem;
+}
+
+.typography-example-3 span:nth-child(1) {
+    background: #ff4136
+}
+
+.typography-example-3 span:nth-child(2) {
+    background: #ff851b
+}
+
+.typography-example-3 span:nth-child(3) {
+    background: #2ecc40
+}
+
+.typography-example-3 span:nth-child(4) {
+    background: #0074d9
+}
+
+.typography-example-3 span:nth-child(5) {
+    background: #b10dc9
+}
+
+
+/* Transitions */
+
+
+/* Example 1: Random individual letter fade */
+
+
+/* One extremely powerful tool at your disposal is transition-delay. Transition delays allow you to delay the start of when a transition occurs. In this first example, we set pseudo-random delays for the opacity transitions on each letter, creating a reveal effect that is both subtle and attractive. */
+
+.ex {
+    background-image: linear-gradient(135deg, #723362, #9d223c);
+    background-color: #9d223c;
+    color: #fff;
+    padding: 1em 0;
+    font-weight: 300;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .4em;
+    padding-left: .4em
+}
+
+.ex span {
+    opacity: 0;
+    transition: opacity 1300ms
+}
+
+.ex span:nth-child(1) {
+    transition-delay: 200ms
+}
+
+.ex span:nth-child(2) {
+    transition-delay: 1200ms
+}
+
+.ex span:nth-child(3) {
+    transition-delay: 800ms
+}
+
+.ex span:nth-child(4) {
+    transition-delay: 300ms
+}
+
+.ex span:nth-child(5) {
+    transition-delay: 700ms
+}
+
+.ex span:nth-child(6) {
+    transition-delay: 600ms
+}
+
+.ex span:nth-child(7) {
+    transition-delay: 400ms
+}
+
+.ex span:nth-child(8) {
+    transition-delay: 900ms
+}
+
+.ex span:nth-child(9) {
+    transition-delay: 700ms
+}
+
+.ex span:nth-child(10) {
+    transition-delay: 50ms
+}
+
+.ex:hover span {
+    opacity: 1
+}

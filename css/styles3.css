@@ -1,0 +1,75 @@
+/* Magic of CSS */
+
+
+/* 3D - NOT WORKING 
+Transitions work on 3D transforms too. */
+
+.ex {
+    border: .2em solid #ff4136;
+    font-size: 3em;
+    text-align: center;
+    padding: .2em;
+    color: #fff;
+}
+
+.ex span:nth-child(1) {
+    background: #ff4136
+}
+
+.ex span:nth-child(2) {
+    background: #ff851b
+}
+
+.ex span:nth-child(3) {
+    background: #2ecc40
+}
+
+.ex span:nth-child(4) {
+    background: #0074d9
+}
+
+.ex span:nth-child(5) {
+    background: #b10dc9
+}
+
+.ex span {
+    -webkit-perspective: 20rem
+}
+
+.ex .front,
+.ex .back {
+    -webkit-backface-visibility: hidden;
+    transition: -webkit-transform 800ms
+}
+
+.ex .back {
+    -webkit-transform: translateZ(0) rotateY(-180deg)
+}
+
+.ex:hover .back {
+    -webkit-transform: translateZ(0) rotateY(0deg)
+}
+
+.ex:hover .front {
+    -webkit-transform: translateZ(0) rotateY(180deg)
+}
+
+.ex .span:nth-child(1) span {
+    transition-delay: 200ms
+}
+
+.ex .span:nth-child(2) span {
+    transition-delay: 400ms
+}
+
+.ex .span:nth-child(3) span {
+    transition-delay: 600ms
+}
+
+.ex .span:nth-child(4) span {
+    transition-delay: 800ms
+}
+
+.ex .span:nth-child(5) span {
+    transition-delay: 1000ms
+}
